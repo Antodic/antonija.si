@@ -5,6 +5,8 @@
   --peach: #FFD8D1;
   --pink: #FA9EBC;
   --font: "Quantico", system-ui, sans-serif;
+  --bg: #F8F3EA;
+  --text: #0B1957;
 }
 
 body {
@@ -27,6 +29,20 @@ body {
   text-decoration: none;
   margin: 0 20px;
   font-weight: 500;
+  background: transparent;
+  padding: 0.2em 0;
+  border-radius: 0;
+  background-image: linear-gradient(var(--text), var(--text));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0 100%;
+  background-clip: content-box;
+  transition: color 0.2s ease-in-out, background-size 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--bg);
+  background-size: 100% 100%;
 }
 
 /* === HERO AREA === */
@@ -36,11 +52,21 @@ body {
 }
 
 .avatar-circle {
-  width: 110px;
-  height: 110px;
-  background: var(--pink);
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin: auto;
+  margin: 0 auto 10px;
+  background: var(--pink);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -57,14 +83,25 @@ h1 {
 
 /* === BUTTON === */
 .button {
-  background: var(--pink);
   color: var(--navy);
   padding: 12px 28px;
-  border-radius: 10px;
+  border-radius: 0;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
   margin-bottom: 50px;
+  background: transparent;
+  background-image: linear-gradient(var(--pink), var(--pink));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 100%;
+  background-clip: content-box;
+  transition: color 0.2s ease-in-out;
+}
+
+.button:hover {
+  color: var(--pink);
+  background-image: linear-gradient(var(--navy), var(--navy));
 }
 
 /* === CARDS === */
@@ -79,9 +116,15 @@ h1 {
 
 .card {
   background: var(--peach);
-  padding: 30px;
-  border-radius: 16px;
-  width: 300px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card h2 {
@@ -96,12 +139,6 @@ h1 {
 }
 
 /* === GENERIC PAGE LAYOUT === */
-.page-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
 .page-hero {
   text-align: center;
   padding: 40px 0 20px;
@@ -124,4 +161,67 @@ h1 {
   max-width: 900px;
   margin: 40px auto 0;
   padding: 0 20px 60px;
-} 
+}
+
+/* === EXPERIMENTS LIST === */
+.experiment-list {
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.experiment-card {
+  position: relative;
+  padding: 18px 22px 18px 28px;
+  border: 2px solid var(--navy);
+  background: var(--cream);
+}
+
+.experiment-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background-image: linear-gradient(var(--pink), var(--peach));
+}
+
+.experiment-card h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.experiment-card p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+/* === CONTACT PAGE === */
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.contact-email-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--pink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-email-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--navy);
+}

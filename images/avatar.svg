@@ -1,0 +1,24 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Antonija avatar</title>
+  <desc id="desc">Abstract circular avatar in pink and navy colors</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FA9EBC"/>
+      <stop offset="100%" stop-color="#FFD8D1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="110" cy="110" r="100" fill="url(#bgGrad)" stroke="#0B1957" stroke-width="6"/>
+
+  <!-- Inner accent ring -->
+  <circle cx="110" cy="110" r="68" fill="none" stroke="#F8F3EA" stroke-width="4" stroke-dasharray="6 8"/>
+
+  <!-- Stylized head and shoulders -->
+  <circle cx="110" cy="88" r="26" fill="#F8F3EA" stroke="#0B1957" stroke-width="3"/>
+  <path d="M60 152c10-24 28-38 50-38s40 14 50 38" fill="#F8F3EA" stroke="#0B1957" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Subtle spark / idea motif -->
+  <path d="M150 52l6-10 6 10m0 0l10 3-10 3m0 0l-6 10-6-10m0 0l-10-3 10-3" fill="none" stroke="#0B1957" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
