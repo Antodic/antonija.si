@@ -91,17 +91,17 @@ h1 {
   display: inline-block;
   margin-bottom: 50px;
   background: transparent;
-  background-image: linear-gradient(var(--pink), var(--pink));
+  background-image: linear-gradient(var(--navy), var(--navy));
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 0% 100%;
   background-position: 0 100%;
   background-clip: content-box;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-size 0.2s ease-in-out;
 }
 
 .button:hover {
-  color: var(--pink);
-  background-image: linear-gradient(var(--navy), var(--navy));
+  color: var(--cream);
+  background-size: 100% 100%;
 }
 
 /* === CARDS === */
